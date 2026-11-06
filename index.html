@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopwise — discover furniture, chairs, and home accessories for every space.">
+  <title>Shopwise | Furniture & Home Decor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo" aria-label="Shopwise home">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        <span>Shopwise</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">HOME</a></li>
+          <li><a href="#features">BENEFITS</a></li>
+          <li><a href="#exclusive-products">PRODUCTS</a></li>
+          <li><a href="#banners">COLLECTIONS</a></li>
+          <li><a href="#trending">TRENDING</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-icons">
+        <button class="icon-button search-toggle" type="button" aria-label="Open product search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <a href="#exclusive-products" class="cart-icon" aria-label="Shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+          <span class="badge" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="search-panel" id="search-panel">
+      <div class="container search-panel-content">
+        <label for="product-search">Search products</label>
+        <input type="search" id="product-search" placeholder="Search chairs, stools, decor...">
+        <button class="clear-search" type="button" aria-label="Clear search">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero slider -->
+    <section class="slider-container" id="home" aria-label="Featured collections">
+      <div class="slider-track">
+        <article class="slide slide-1">
+          <div class="container slide-content">
+            <div class="text-col">
+              <p class="subtitle">Get up to 50% off today only!</p>
+              <h1>Wooden Chair<br>Collection</h1>
+              <p class="desc">Bring warmth and timeless style to your home with our favorite wooden designs.</p>
+              <a href="#exclusive-products" class="btn btn-primary">SHOP NOW</a>
+            </div>
+            <div class="img-col">
+              <img src="assets/hero-wooden-chair.png" alt="Classic wooden chair" fetchpriority="high">
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide-2">
+          <div class="container slide-content">
+            <div class="text-col">
+              <p class="subtitle">NEW TRENDING</p>
+              <h1>Sofa Collection</h1>
+              <p class="desc">Create a comfortable corner with furniture that makes every moment feel special.</p>
+              <a href="#trending" class="btn btn-outline">SHOP NOW</a>
+            </div>
+            <div class="img-col">
+              <img src="assets/hero-sofa.png" alt="Modern woven sofa with cushions" loading="lazy">
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide-3">
+          <div class="container slide-content">
+            <div class="text-col">
+              <p class="subtitle">A FRESH LOOK FOR YOUR HOME</p>
+              <h1>Living Room<br>Collection</h1>
+              <p class="desc">Discover simple, modern pieces designed to make your living space feel like home.</p>
+              <a href="#banners" class="btn btn-outline">SHOP NOW</a>
+            </div>
+            <div class="img-col">
+              <img src="assets/hero-lounge-chair.png" alt="Woven lounge chair" loading="lazy">
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="slider-control slider-prev" type="button" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button class="slider-control slider-next" type="button" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+
+      <div class="slider-dots" aria-label="Choose a slide">
+        <button class="slider-dot active" type="button" aria-label="Go to slide 1" aria-pressed="true"></button>
+        <button class="slider-dot" type="button" aria-label="Go to slide 2" aria-pressed="false"></button>
+        <button class="slider-dot" type="button" aria-label="Go to slide 3" aria-pressed="false"></button>
+      </div>
+    </section>
+
+    <!-- Store benefits -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="features-box">
+          <article class="feature-item">
+            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            <div class="feature-text">
+              <h3>Free Delivery</h3>
+              <p>On selected orders</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+            <div class="feature-text">
+              <h3>Money Returns</h3>
+              <p>30 days return policy</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <div class="feature-text">
+              <h3>Online Support</h3>
+              <p>Here when you need us</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
+            <div class="feature-text">
+              <h3>Secure Payment</h3>
+              <p>Safe payment options</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exclusive products -->
+    <section class="exclusive-products" id="exclusive-products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">OUR SELECTION</p>
+          <h2 class="section-title">Exclusive Products</h2>
+          <p class="section-description">Thoughtful furniture pieces for a more beautiful home.</p>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card" data-name="Oak Counter Stool">
+            <div class="product-img-box">
+              <img src="assets/oak-counter-stool.png" alt="Natural oak counter stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Oak Counter Stool">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Oak Counter Stool to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Oak Counter Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$45.00</span><span class="old-price">$55.25</span></div>
+                  <div class="rating" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <span>(21)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Oak Counter Stool" data-price="45">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Black Bar Stool">
+            <div class="product-img-box">
+              <img src="assets/black-bar-stool.png" alt="Black modern bar stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Black Bar Stool">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Black Bar Stool to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Black Bar Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$55.00</span><span class="old-price">$95.00</span></div>
+                  <div class="rating" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <span>(15)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Black Bar Stool" data-price="55">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="White Lounge Chair">
+            <div class="product-img-box">
+              <img src="assets/white-lounge-chair.png" alt="White lounge chair with wooden arms" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view White Lounge Chair">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add White Lounge Chair to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>White Lounge Chair</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$68.00</span><span class="old-price">$99.00</span></div>
+                  <div class="rating" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span>(25)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="White Lounge Chair" data-price="68">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Red Bar Stool">
+            <div class="product-img-box">
+              <img src="assets/red-bar-stool.png" alt="Red seat bar stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Red Bar Stool">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Red Bar Stool to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Red Bar Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$69.00</span><span class="old-price">$89.00</span></div>
+                  <div class="rating" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <span>(22)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Red Bar Stool" data-price="69">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Curved Wooden Chair">
+            <div class="product-img-box">
+              <img src="assets/wooden-chair.png" alt="Curved wooden dining chair" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Curved Wooden Chair">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Curved Wooden Chair to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Curved Wooden Chair</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$45.00</span><span class="old-price">$55.25</span></div>
+                  <div class="rating" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span>(21)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Curved Wooden Chair" data-price="45">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Decorative Wooden Birds">
+            <div class="product-img-box">
+              <img src="assets/decorative-birds.png" alt="Pair of decorative wooden bird figures" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Decorative Wooden Birds">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Decorative Wooden Birds to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Decorative Wooden Birds</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$55.00</span><span class="old-price">$95.00</span></div>
+                  <div class="rating" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <span>(15)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Decorative Wooden Birds" data-price="55">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Blue Accent Chair">
+            <div class="product-img-box">
+              <img src="assets/blue-accent-chair.png" alt="Blue upholstered accent chair" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Blue Accent Chair">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Blue Accent Chair to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Blue Accent Chair</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$68.00</span><span class="old-price">$99.00</span></div>
+                  <div class="rating" aria-label="4 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    <span>(25)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Blue Accent Chair" data-price="68">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Modern Dining Chair">
+            <div class="product-img-box">
+              <img src="assets/modern-dining-chair.png" alt="Modern white dining chair with wooden legs" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Modern Dining Chair">
+                  <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                </button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Modern Dining Chair to wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Modern Dining Chair</h3>
+              <div class="product-bottom">
+                <div class="default-view">
+                  <div class="price"><span class="new-price">$69.00</span><span class="old-price">$89.00</span></div>
+                  <div class="rating" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span>(22)</span>
+                  </div>
+                </div>
+                <div class="hover-view">
+                  <button class="add-to-cart-btn" type="button" data-product="Modern Dining Chair" data-price="69">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>No products match your search.</p>
+      </div>
+    </section>
+
+    <!-- Collection banners -->
+    <section class="banners-section" id="banners">
+      <div class="container banners-container">
+        <article class="banner-box banner-left">
+          <div class="banner-content top-left">
+            <p>MAKE YOUR SPACE YOURS</p>
+            <h2>New Collection</h2>
+            <a href="#exclusive-products" class="shop-link">Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <img src="assets/hero-wooden-chair.png" alt="Wooden chair collection" loading="lazy">
+        </article>
+
+        <article class="banner-box banner-right">
+          <div class="banner-content center-left">
+            <p>COMFORT MEETS STYLE</p>
+            <h2>Sale 40% Off</h2>
+            <a href="#trending" class="shop-link">Shop Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <img src="assets/hero-sofa.png" alt="Sofa collection" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <!-- Trending products -->
+    <section class="trending-items" id="trending">
+      <div class="container">
+        <div class="section-header-arrows">
+          <div>
+            <p class="section-kicker">CUSTOMER FAVORITES</p>
+            <h2 class="section-title">Trending Items</h2>
+          </div>
+          <div class="trending-controls">
+            <button class="slider-arrow trending-prev" type="button" aria-label="Scroll trending products left">
+              <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i>
+            </button>
+            <button class="slider-arrow trending-next" type="button" aria-label="Scroll trending products right">
+              <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="trending-grid">
+          <article class="product-card" data-name="Oak Counter Stool">
+            <div class="product-img-box">
+              <img src="assets/oak-counter-stool.png" alt="Natural oak counter stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Oak Counter Stool"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Oak Counter Stool to wishlist" aria-pressed="false"><i class="fa-regular fa-heart" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Oak Counter Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view"><div class="price"><span class="new-price">$45.00</span><span class="old-price">$55.25</span></div><div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(21)</span></div></div>
+                <div class="hover-view"><button class="add-to-cart-btn" type="button" data-product="Oak Counter Stool" data-price="45"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Black Bar Stool">
+            <div class="product-img-box">
+              <img src="assets/black-bar-stool.png" alt="Black modern bar stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Black Bar Stool"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Black Bar Stool to wishlist" aria-pressed="false"><i class="fa-regular fa-heart" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Black Bar Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view"><div class="price"><span class="new-price">$55.00</span><span class="old-price">$95.00</span></div><div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(15)</span></div></div>
+                <div class="hover-view"><button class="add-to-cart-btn" type="button" data-product="Black Bar Stool" data-price="55"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="White Lounge Chair">
+            <div class="product-img-box">
+              <img src="assets/white-lounge-chair.png" alt="White lounge chair with wooden arms" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view White Lounge Chair"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add White Lounge Chair to wishlist" aria-pressed="false"><i class="fa-regular fa-heart" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>White Lounge Chair</h3>
+              <div class="product-bottom">
+                <div class="default-view"><div class="price"><span class="new-price">$68.00</span><span class="old-price">$99.00</span></div><div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(25)</span></div></div>
+                <div class="hover-view"><button class="add-to-cart-btn" type="button" data-product="White Lounge Chair" data-price="68"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart</button></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Red Bar Stool">
+            <div class="product-img-box">
+              <img src="assets/red-bar-stool.png" alt="Red seat bar stool" loading="lazy">
+              <div class="hover-actions">
+                <button class="action-btn quick-view-btn" type="button" aria-label="Quick view Red Bar Stool"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+                <button class="action-btn wishlist-btn" type="button" aria-label="Add Red Bar Stool to wishlist" aria-pressed="false"><i class="fa-regular fa-heart" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Red Bar Stool</h3>
+              <div class="product-bottom">
+                <div class="default-view"><div class="price"><span class="new-price">$69.00</span><span class="old-price">$89.00</span></div><div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(22)</span></div></div>
+                <div class="hover-view"><button class="add-to-cart-btn" type="button" data-product="Red Bar Stool" data-price="69"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Add To Cart</button></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-widget">
+          <h3>Contact Info</h3>
+          <ul class="contact-info-list">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Street, Old Trafford, New York, USA</li>
+            <li><i class="fa-regular fa-envelope" aria-hidden="true"></i> info@sitename.com</li>
+            <li><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> +1 457 789 789 65</li>
+          </ul>
+          <div class="social-circles">
+            <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#contact" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#contact" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-widget">
+          <h3>Useful Links</h3>
+          <ul class="footer-links">
+            <li><a href="#features">About Us</a></li>
+            <li><a href="#exclusive-products">Products</a></li>
+            <li><a href="#banners">Collections</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h3>My Account</h3>
+          <ul class="footer-links">
+            <li><a href="#exclusive-products">My Account</a></li>
+            <li><a href="#exclusive-products">Discounts</a></li>
+            <li><a href="#exclusive-products">Returns</a></li>
+            <li><a href="#exclusive-products">Order History</a></li>
+            <li><a href="#exclusive-products">Order Tracking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget">
+          <h3>Subscribe Our Newsletter</h3>
+          <p class="newsletter-desc">Sign up to hear about new collections and special offers.</p>
+          <form class="newsletter-form">
+            <label class="visually-hidden" for="newsletter-email">Email address</label>
+            <input type="email" id="newsletter-email" placeholder="Enter Email Address" required>
+            <button type="submit" aria-label="Subscribe"><i class="fa-regular fa-envelope" aria-hidden="true"></i></button>
+          </form>
+          <p class="newsletter-message" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-content">
+        <p class="copyright">© <span id="year"></span> Shopwise. All rights reserved.</p>
+        <p class="demo-note">Demo store — checkout and newsletter are not connected to a backend.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick view popup -->
+  <div class="quick-view-modal" id="quick-view-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Close quick view">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <img class="modal-image" src="" alt="">
+      <div class="modal-info">
+        <p class="section-kicker">PRODUCT DETAILS</p>
+        <h2 id="modal-title"></h2>
+        <p class="modal-price"></p>
+        <p class="modal-description">A simple and stylish furniture piece selected for your home.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-message" id="toast-message" role="status" aria-live="polite"></div>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</body>
+</html>
